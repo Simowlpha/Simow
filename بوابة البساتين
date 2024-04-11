@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'School Support Center',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  List<Student> students = [];
+  double waterAndElectricityExpenses = 0;
+  double supervisorSalary = 800;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('School Support Center'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Widgets for managing students, expenses, and revenues
+            // Add widgets here for managing students, expenses, and revenues
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Student {
+  String name;
+  String level;
+  List<String> subjects;
+  DateTime enrollmentDate;
+  double monthlyFee;
+
+  Student({
+    required this.name,
+    required this.level,
+    required this.subjects,
+    required this.enrollmentDate,
+    required this.monthlyFee,
+  });
+}
